@@ -11,6 +11,10 @@ int main() {
         return 1;
     }
 
+    if (pid > 0) {
+        std::cout << "PARENT started, now wating for process ID#" << pid << std::endl;
+    }
+
 
     return 0;
 }
