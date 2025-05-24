@@ -13,6 +13,12 @@ int main() {
 
     if (pid > 0) {
         std::cout << "PARENT started, now wating for process ID#" << pid << std::endl;
+
+        // Waiting for child to finish running
+        int status;
+        waitpid(pid, &status, 0);
+        
+        std::cout << "PARENT resumed. CHILD exit code of " << WEXITSTATUS(status) << ". Now terminating parent" << std::endl;
     }
 
     if (pid == 0) {
