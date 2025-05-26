@@ -21,7 +21,7 @@ int main(int argc, char* argv[]) {
         std::cout << "PARENT resumed. CHILD exit code of " << WEXITSTATUS(status) << ". Now terminating parent" << std::endl;
     } else {
         // Child is processing here
-        std::cout << "CHILD started" << std::endl;
+        std::cout << "CHILD started." << std::endl;
 
         // The child didn't get into the chopper with the terminator 2 and died ❌
         if (argc == 1){
